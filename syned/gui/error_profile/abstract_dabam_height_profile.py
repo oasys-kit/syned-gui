@@ -18,7 +18,7 @@ from oasys.widgets import congruence
 from oasys.widgets.gui import ConfirmDialog
 from oasys.util.oasys_util import EmittingStream, Overlay
 
-from syned.tools.error_profile.error_profile_calculator import DabamInputParameters, calculate_dabam_profile
+from srxraylib.metrology.error_profile_calculator import DabamInputParameters, calculate_dabam_profile
 
 try:
     from mpl_toolkits.mplot3d import Axes3D  # necessario per caricare i plot 3D

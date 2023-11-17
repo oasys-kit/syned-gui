@@ -65,7 +65,7 @@ from oasys.widgets import congruence
 from oasys.widgets.gui import ConfirmDialog
 from oasys.util.oasys_util import EmittingStream
 
-from syned.tools.error_profile.error_profile_calculator import ErrorProfileInputParameters, calculate_heigth_profile
+from srxraylib.metrology.error_profile_calculator import ErrorProfileInputParameters, calculate_heigth_profile
 
 try:
     from mpl_toolkits.mplot3d import Axes3D  # necessario per caricare i plot 3D

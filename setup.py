@@ -11,7 +11,7 @@ except AttributeError:
 
 NAME = 'syned-gui'
 
-VERSION = '1.0.2'
+VERSION = '1.0.3'
 ISRELEASED = True
 
 DESCRIPTION = 'SYNED (SYNchrotron Elements Dictionary) gui library'
@@ -57,7 +57,7 @@ SETUP_REQUIRES = (
     'setuptools',
 )
 
-NAMESPACE_PACKAGES = ["syned", "syned.gui",]
+NAMESPACE_PACKAGES = ["syned_gui",]
 
 
 PACKAGES = find_packages(exclude=('*.tests', '*.tests.*', 'tests.*', 'tests'))
@@ -95,7 +95,7 @@ def git_version():
     return GIT_REVISION
 
 
-def write_version_py(filename='syned/version.py'):
+def write_version_py(filename='syned_gui/version.py'):
     # Copied from numpy setup.py
     cnt = """
 # THIS FILE IS GENERATED FROM syned SETUP.PY
@@ -112,9 +112,9 @@ if not release:
     FULLVERSION = VERSION
     if os.path.exists('.git'):
         GIT_REVISION = git_version()
-    elif os.path.exists('syned/version.py'):
+    elif os.path.exists('syned_gui/version.py'):
         # must be a source distribution, use existing version file
-        version = SourceFileLoader('syned.version', 'syned/version.py').load_module()
+        version = SourceFileLoader('syned_gui.version', 'syned_gui/version.py').load_module()
         GIT_REVISION = version.git_revision
     else:
         GIT_REVISION = "Unknown"

@@ -256,7 +256,7 @@ class AbstractBeamlineRenderer(widget.OWWidget):
         self.set_range(do_refresh=False)
 
     def refresh(self):
-        self.render(reset_rotation=False)
+        self.perform_rendering(reset_rotation=False)
         self.figure_canvas.draw()
 
     def set_range(self, do_refresh=True):
@@ -276,7 +276,7 @@ class AbstractBeamlineRenderer(widget.OWWidget):
         self.reset_all()
 
     def reset_all(self):
-        self.render(reset_rotation=True)
+        self.perform_rendering(reset_rotation=True)
         self.figure_canvas.draw()
 
     def reset_rotation(self):
@@ -294,7 +294,7 @@ class AbstractBeamlineRenderer(widget.OWWidget):
                 self.range_max = self.range_min + self.tick_interval
                 self.slider_max.setValue(self.range_max*self.units_to_mm)
 
-    def render(self, reset_rotation=True, on_receiving_input=False):
+    def perform_rendering(self, reset_rotation=True, on_receiving_input=False):
         try:
             self.check_fields(on_receiving_input)
 

@@ -11,7 +11,7 @@ except AttributeError:
 
 NAME = 'syned-gui'
 
-VERSION = '1.0.3'
+VERSION = '1.0.4'
 ISRELEASED = True
 
 DESCRIPTION = 'SYNED (SYNchrotron Elements Dictionary) gui library'
